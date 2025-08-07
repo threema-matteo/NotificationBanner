@@ -197,6 +197,9 @@ open class BaseNotificationBanner: UIView {
             spacerView.backgroundColor = color
         }
     }
+    
+    // MARK: - Threema Edit: Added property
+    public var identifier: String = ""
 
     init(style: BannerStyle, colors: BannerColorsProtocol? = nil) {
         self.style = style

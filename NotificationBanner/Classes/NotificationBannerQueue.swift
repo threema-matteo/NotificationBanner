@@ -30,8 +30,9 @@ open class NotificationBannerQueue: NSObject {
     /// The default instance of the NotificationBannerQueue
     public static let `default` = NotificationBannerQueue()
 
+    // MARK: - Threema Edit: Made `public`
     /// The notification banners currently placed on the queue
-    private(set) var banners: [BaseNotificationBanner] = []
+    public var banners: [BaseNotificationBanner] = []
 
     /// The notification banners currently placed on the queue
     private(set) var maxBannersOnScreenSimultaneously: Int = 1
@@ -85,7 +86,7 @@ open class NotificationBannerQueue: NSObject {
         Removes a banner from the queue
         -parameter banner: A notification banner to remove from the queue.
      */
-    func removeBanner(_ banner: BaseNotificationBanner) {
+    public func removeBanner(_ banner: BaseNotificationBanner) {
 
         if let index = banners.firstIndex(of: banner) {
             banners.remove(at: index)
